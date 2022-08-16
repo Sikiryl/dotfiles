@@ -1,0 +1,8 @@
+{{- $email := promptStringOnce . "email" "Email address" -}}
+{{- $kdbx := promptStringOnce . "./config.kdbx" "KeepassXC Database Path(.kdbx)" -}}
+
+[data]
+    email = {{ $email | quote }}
+
+[keepassxc]
+    database = {{ $kdbx | quote }}
